@@ -8,7 +8,8 @@ function buildTriangle($n) {
 
     $rows = sqrt($n);
 
-    if ($rows != intval($rows)) {
+    // Проверка: n должно быть полным квадратом, и минимум 3 строки
+    if ($rows != intval($rows) || $rows < 3) {
         echo "Невозможно построить треугольник\n";
         return;
     }
